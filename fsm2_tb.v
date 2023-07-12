@@ -45,14 +45,14 @@ module fsm2_tb();
 	
 
     //incorrect PIN
-    accNumber = 12'd2278;
+    accNumber = 12'd6754;
     pin = 4'b0100;
     
     #30
 
     //valid credentials
-    accNumber = 12'd2178;
-    pin = 4'b0100;
+    accNumber = 12'd7896;
+    pin = 4'b0110;
     
     #30
     
@@ -90,17 +90,17 @@ module fsm2_tb();
     #30
 
 
-    //transfer some money to the destination account with number 2816
+    //transfer some money to the destination account with number 1234
     amount = 10000;
-    destinationAccNumber = 2816;
+    destinationAccNumber = 1234;
 	menuOption = `TRANSACTION;
     clk = ~clk;
 	 #5clk = ~clk;
     #30
 
-    //transfer too much money to the destination account with number 2816 which exceeds 10000 and cuases an error
+    //transfer too much money to the destination account with number 1234 which exceeds 10000 and cuases an error
     amount <= 10000;
-    destinationAccNumber = 2816;
+    destinationAccNumber = 1234;
 	menuOption = `TRANSACTION;
     clk = ~clk;
 	 #5clk = ~clk;
@@ -113,8 +113,8 @@ module fsm2_tb();
     exit = 0;
     #30
     
-    //log in using the account with number 2816
-    accNumber = 12'd2816;
+    //log in using the account with number 1234
+    accNumber = 12'd1234;
     pin = 4'b0110;
     #30
 
