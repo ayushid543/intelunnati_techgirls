@@ -37,16 +37,16 @@ module fsm2(
 
   // Initializing the database with arbitrary accounts
   initial begin
-    account_db[0] = 12'd2749; pin_db[0] = 4'b0000;
-    account_db[1] = 12'd2175; pin_db[1] = 4'b0001;
-    account_db[2] = 12'd2429; pin_db[2] = 4'b0010;
-    account_db[3] = 12'd2125; pin_db[3] = 4'b0011;
-    account_db[4] = 12'd2178; pin_db[4] = 4'b0100;
-    account_db[5] = 12'd2647; pin_db[5] = 4'b0101;
-    account_db[6] = 12'd2816; pin_db[6] = 4'b0110;
-    account_db[7] = 12'd2910; pin_db[7] = 4'b0111;
-    account_db[8] = 12'd2299; pin_db[8] = 4'b1000;
-    account_db[9] = 12'd2689; pin_db[9] = 4'b1001;
+    account_db[0] = 12'd1234; pin_db[0] = 4'b0000;
+    account_db[1] = 12'd5673; pin_db[1] = 4'b0001;
+    account_db[2] = 12'd3487; pin_db[2] = 4'b0010;
+    account_db[3] = 12'd2352; pin_db[3] = 4'b1111;
+    account_db[4] = 12'd9999; pin_db[4] = 4'b1100;
+    account_db[5] = 12'd3546; pin_db[5] = 4'b0101;
+    account_db[6] = 12'd7896; pin_db[6] = 4'b0110;
+    account_db[7] = 12'd6688; pin_db[7] = 4'b0111;
+    account_db[8] = 12'd6776; pin_db[8] = 4'b1011;
+    account_db[9] = 12'd1356; pin_db[9] = 4'b1001;
   end
 
   always @(deAuth) begin
@@ -114,16 +114,16 @@ module ATM(
   reg [15:0] balance_database [0:9];
   initial begin
     $display("Welcome to the ATM");
-    balance_database[0] = 16'd500;
-    balance_database[1] = 16'd500;
+   balance_database[0] = 16'd75128;
+    balance_database[1] = 16'd56980;
     balance_database[2] = 16'd500;
-    balance_database[3] = 16'd500;
-    balance_database[4] = 16'd500;
-    balance_database[5] = 16'd500;
-    balance_database[6] = 16'd500;
-    balance_database[7] = 16'd500;
-    balance_database[8] = 16'd500;
-    balance_database[9] = 16'd500;
+    balance_database[3] = 16'd56234;
+    balance_database[4] = 16'd25000;
+    balance_database[5] = 16'd7890;
+    balance_database[6] = 16'd7490;
+    balance_database[7] = 16'd6900;
+    balance_database[8] = 16'd67453;
+    balance_database[9] = 16'd20000;
   end
 
   reg [3:0] present_state = `WAITING;
